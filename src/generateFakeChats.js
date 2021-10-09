@@ -1,4 +1,4 @@
-import faker from "faker";
+const faker = require("faker");
 
 class User {
   constructor() {
@@ -20,7 +20,7 @@ export class Message {
 
 export const mainUser = new User();
 
-export const contacts = [...Array(15).keys].map(() => new User());
+export const contacts = [...Array(15).keys()].map(() => new User());
 
 export const contactsMessages = contacts.map((contact) => {
   return {

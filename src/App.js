@@ -1,20 +1,12 @@
-import "./App.css";
+import "./assets/css/App.css";
+import SideNav from "./components/SideNav";
+import MainSection from "./components/MainSection";
 
 function App() {
   return (
     <div className="App">
-      <aside>
-        <header>
-          <div className="avatar-component">
-            <img
-              className="avatar"
-              src="https://pbs.twimg.com/profile_images/501759258665299968/3799Ffxy.jpeg"
-              alt=""
-            />
-          </div>
-        </header>
-      </aside>
-      <main></main>
+      <SideNav />
+      <MainSection />
     </div>
   );
 }
