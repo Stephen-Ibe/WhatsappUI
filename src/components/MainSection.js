@@ -1,4 +1,6 @@
 import React from "react";
+import doubleCheck from "../assets/images/done_all.svg";
+import emojiIcon from "../assets/images/tag_faces.svg";
 
 function MainSection() {
   return (
@@ -24,6 +26,15 @@ function MainSection() {
         <div className="message sent">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
           officiis!
+          <div className="metadata">
+            <span className="date">05/20/2020</span>
+            <img src={doubleCheck} className="icon-small" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className="chat-input-box">
+        <div className="icon emoji-selector">
+          <img src={emojiIcon} alt="" />
         </div>
       </div>
     </main>
