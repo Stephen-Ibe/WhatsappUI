@@ -4,7 +4,7 @@ import MainSection from "./components/MainSection";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <SideNav />
       <MainSection />
     </div>
