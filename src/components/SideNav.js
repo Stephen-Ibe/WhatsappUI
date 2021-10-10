@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import { contactsMessages, mainUser } from "../generateFakeChats";
+import React from "react";
 import Avatar from "./subcomponents/Avatar";
 import ContactBox from "./subcomponents/ContactBox";
 
-const SideNav = ({ setContactSelected }) => {
-  const [data, setData] = useState(contactsMessages);
-
+const SideNav = ({ mainUser, setContactSelected, data }) => {
   return (
     <aside>
-      {console.log(data)}
       <header>
         <Avatar user={mainUser} showName />
       </header>
