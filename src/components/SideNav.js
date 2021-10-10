@@ -3,8 +3,9 @@ import { contactsMessages, mainUser } from "../generateFakeChats";
 import Avatar from "./subcomponents/Avatar";
 import ContactBox from "./subcomponents/ContactBox";
 
-const SideNav = () => {
+const SideNav = ({ setContactSelected }) => {
   const [data, setData] = useState(contactsMessages);
+
   return (
     <aside>
       {console.log(data)}
@@ -16,7 +17,11 @@ const SideNav = () => {
       </div>
       <div className="contact-boxes">
         {data.map(({ contact }) => (
-          <ContactBox contact={contact} />
+          <ContactBox
+            contact={contact}
+            key={contact.id}
+            setContactSelected={setContactSelected}
+          />
         ))}
       </div>
     </aside>

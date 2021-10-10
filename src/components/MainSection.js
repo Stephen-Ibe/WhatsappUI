@@ -2,19 +2,13 @@ import React from "react";
 import doubleCheck from "../assets/images/done_all.svg";
 import emojiIcon from "../assets/images/tag_faces.svg";
 import micIcon from "../assets/images/mic.svg";
+import Avatar from "./subcomponents/Avatar";
 
-const MainSection = () => {
+const MainSection = ({ contactSelected }) => {
   return (
     <main>
       <header>
-        <div className="avatar-component">
-          <img
-            className="avatar"
-            src="https://pbs.twimg.com/profile_images/501759258665299968/3799Ffxy.jpeg"
-            alt=""
-          />
-          <h3 className="avatar-title">Sofia</h3>
-        </div>
+        <Avatar user={contactSelected} />
       </header>
       <div className="chats">
         <div className="message received">

@@ -2,10 +2,10 @@ import React from "react";
 import doubleCheck from "../../assets/images/done_all.svg";
 import Avatar from "./Avatar";
 
-function ContactBox({ contact }) {
+function ContactBox({ contact, setContactSelected }) {
   return (
     <>
-      <div className="contact-box">
+      <div className="contact-box" onClick={() => setContactSelected(contact)}>
         <Avatar user={contact} />
         <div className="right-section">
           <div className="contact-box-header">
