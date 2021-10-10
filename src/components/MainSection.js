@@ -1,8 +1,9 @@
 import React from "react";
 import doubleCheck from "../assets/images/done_all.svg";
 import emojiIcon from "../assets/images/tag_faces.svg";
+import micIcon from "../assets/images/mic.svg";
 
-function MainSection() {
+const MainSection = () => {
   return (
     <main>
       <header>
@@ -36,9 +37,15 @@ function MainSection() {
         <div className="icon emoji-selector">
           <img src={emojiIcon} alt="" />
         </div>
+        <div className="chat-input">
+          <input type="text" placeholder="Type a messsage" />
+        </div>
+        <div className="icon send">
+          <img src={micIcon} alt="" />
+        </div>
       </div>
     </main>
   );
-}
+};
 
 export default MainSection;

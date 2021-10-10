@@ -1,41 +1,23 @@
-import React from "react";
-import doubleCheck from "../assets/images/done_all.svg";
+import React, { useState } from "react";
+import { contactsMessages, mainUser } from "../generateFakeChats";
+import Avatar from "./subcomponents/Avatar";
+import ContactBox from "./subcomponents/ContactBox";
 
 const SideNav = () => {
+  const [data, setData] = useState(contactsMessages);
   return (
     <aside>
+      {console.log(data)}
       <header>
-        <div className="avatar-component">
-          <img
-            className="avatar"
-            src="https://pbs.twimg.com/profile_images/501759258665299968/3799Ffxy.jpeg"
-            alt=""
-          />
-        </div>
+        <Avatar user={mainUser} showName />
       </header>
       <div className="search">
         <input type="text" placeholder="Search or Start a new chat" />
       </div>
       <div className="contact-boxes">
-        <div className="contact-box">
-          <div className="avatar-component">
-            <img
-              className="avatar"
-              src="https://pbs.twimg.com/profile_images/501759258665299968/3799Ffxy.jpeg"
-              alt=""
-            />
-          </div>
-          <div className="right-section">
-            <div className="contact-box-header">
-              <div className="avatar-title">Jessica</div>
-              <div className="time-mark">yesterday</div>
-            </div>
-            <div className="last-msg">
-              <img src={doubleCheck} className="icon-small" alt="" />
-              <span className="text">Lorem ipsum dolor</span>
-            </div>
-          </div>
-        </div>
+        {data.map(({ contact }) => (
+          <ContactBox contact={contact} />
+        ))}
       </div>
     </aside>
   );

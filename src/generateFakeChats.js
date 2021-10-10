@@ -2,7 +2,7 @@ const faker = require("faker");
 
 class User {
   constructor() {
-    this.id = faker.random.uuid();
+    this.id = faker.datatype.uuid();
     this.name = faker.name.findName();
     this.avatar = faker.internet.avatar();
   }
@@ -10,7 +10,7 @@ class User {
 
 export class Message {
   constructor(isMainUser, msg, date) {
-    this.id = faker.random.uuid();
+    this.id = faker.datatype.uuid();
     this.msg =
       msg || faker.lorem.words(faker.helpers.randomize([...Array(20).keys()]));
     this.isMainUser = isMainUser;
