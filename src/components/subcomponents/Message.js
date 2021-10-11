@@ -7,7 +7,7 @@ function Message({ message }) {
     <div className={`message ${message.isMainUser ? "sent" : "received"}`}>
       {/* {message.msg} */}
       <div className="metadata">
-        <span className="date">{message.date.toLocaleString()}</span>
+        {/* <span className="date">{message.date.toLocaleString()}</span> */}
         <img src={doubleCheck} className="icon-small" alt="" />
       </div>
     </div>
